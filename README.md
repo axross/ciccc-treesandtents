@@ -13,6 +13,8 @@ This repository is the code what members below made as the final project.
 
 ## Development Workflows
 
+If you're not sure about these flows, let @axross know!
+
 ### Take a Task
 
 1. Choose and open an issue (as task) on the "To Do" column

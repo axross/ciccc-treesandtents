@@ -5,12 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import treesandtents.Controller.Board;
+import treesandtents.Controller.MainController;
 
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("View/main.fxml"));
-        primaryStage.setTitle("Hello World");
+        //The comment below is to test boardGame screen
+        Parent root = FXMLLoader.load(getClass().getResource("View/board.fxml"));
+        primaryStage.setTitle("Dogs and Bones");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }

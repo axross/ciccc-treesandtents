@@ -1,5 +1,6 @@
 package treesandtents.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -8,7 +9,7 @@ import javafx.scene.layout.GridPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Board implements Initializable {
+public class BoardController implements Initializable {
     //C == Column   //R == Row
     //Example: labelC1R0 -> Label of column(C) 1 and row(R) 0
 
@@ -73,6 +74,35 @@ public class Board implements Initializable {
                 {btnC1R5, btnC2R5, btnC3R5, btnC4R5, btnC5R5}
         };
 
+    }
+
+    /**
+     * States:
+     * 1 - Bone
+     * 0 - Empty
+     * 2 - Grass
+     * 3 - Dog
+     * @param actionEvent
+     */
+    public void buttonClicked(ActionEvent actionEvent) {
+        Button btnClicked = (Button) actionEvent.getSource();
+
+        if(!btnClicked.getText().equals("1")){
+            switch (btnClicked.getText()){
+                case "0":
+                    btnClicked.setText("2");
+                    break;
+                case "2":
+                    btnClicked.setText("3");
+                    break;
+                case "3":
+                    btnClicked.setText("0");
+                    break;
+                default:
+                    btnClicked.setText("-1");
+                    break;
+            }
+        }
     }
 
 

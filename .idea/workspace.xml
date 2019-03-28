@@ -67,6 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/treesandtents/View/board.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="274">
               <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
             </state>
@@ -101,6 +102,7 @@
           </provider>
         </entry>
       </file>
+
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Downloads/TicTacToe/src/sample/Controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">

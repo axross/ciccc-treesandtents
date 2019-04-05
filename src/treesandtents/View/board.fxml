@@ -22,16 +22,16 @@
       <RowConstraints fx:id="r5" />
   </rowConstraints>
    <children>
-       <Label fx:id="labelC0R1" text="N" GridPane.rowIndex="1" />
-       <Label fx:id="labelC0R2" text="N" GridPane.rowIndex="2" />
-       <Label fx:id="labelC0R3" text="N" GridPane.rowIndex="3" />
-       <Label fx:id="labelC0R4" text="N" GridPane.rowIndex="4" />
-       <Label fx:id="labelC0R5" text="N" GridPane.rowIndex="5" />
-       <Label fx:id="labelC1R0" text="N" GridPane.columnIndex="1" />
-       <Label fx:id="labelC2R0" text="N" GridPane.columnIndex="2" />
-       <Label fx:id="labelC3R0" text="N" GridPane.columnIndex="3" />
-       <Label fx:id="labelC4R0" text="N" GridPane.columnIndex="4" />
-       <Label fx:id="labelC5R0" text="N" GridPane.columnIndex="5" />
+       <Label fx:id="labelC0R1" text="1" GridPane.rowIndex="1" />
+       <Label fx:id="labelC0R2" text="1" GridPane.rowIndex="2" />
+       <Label fx:id="labelC0R3" text="0" GridPane.rowIndex="3" />
+       <Label fx:id="labelC0R4" text="2" GridPane.rowIndex="4" />
+       <Label fx:id="labelC0R5" text="1" GridPane.rowIndex="5" />
+       <Label fx:id="labelC1R0" text="2" GridPane.columnIndex="1" />
+       <Label fx:id="labelC2R0" text="0" GridPane.columnIndex="2" />
+       <Label fx:id="labelC3R0" text="1" GridPane.columnIndex="3" />
+       <Label fx:id="labelC4R0" text="1" GridPane.columnIndex="4" />
+       <Label fx:id="labelC5R0" text="1" GridPane.columnIndex="5" />
        <Button fx:id="btnC1R1" text="0" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#buttonClicked"/>
        <Button fx:id="btnC1R2" text="0" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#buttonClicked"/>
        <Button fx:id="btnC1R3" text="0" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#buttonClicked"/>

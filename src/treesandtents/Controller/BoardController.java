@@ -6,6 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.FontWeight;
+import treesandtents.Model.BoardModel;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -63,6 +67,17 @@ public class BoardController implements Initializable {
 
     private Button[][] boardGrid;
 
+    private String[][] boardModelGrid = new String[][] {
+        {" ", "0", "0", "0", "0", "0"},
+        {"0", "0", "0", "0", "0", "0"},
+        {"0", "0", "1", "0", "1", "0"},
+        {"0", "0", "0", "0", "0", "0"},
+        {"0", "1", "1", "0", "0", "0"},
+        {"0", "0", "0", "0", "0", "1"}
+    };
+
+    BoardModel boardModel = new BoardModel(boardModelGrid);
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         /// initializing instance variables (properties)
@@ -74,7 +89,77 @@ public class BoardController implements Initializable {
                 {btnC1R5, btnC2R5, btnC3R5, btnC4R5, btnC5R5}
         };
 
+        validateNumberOfDogs();
+
     }
+
+    public void validateNumberOfDogs(){
+        boardModel.countNumberOfDogs();
+
+        //validate rows
+        if (boardModel.getBoardModelGrid(1,0).equals(labelC0R1.getText())){
+            labelC0R1.setTextFill(Color.BLACK);
+        }else {
+            labelC0R1.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(2,0).equals(labelC0R2.getText())){
+            labelC0R2.setTextFill(Color.BLACK);
+        }else {
+            labelC0R2.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(3,0).equals(labelC0R3.getText())){
+            labelC0R3.setTextFill(Color.BLACK);
+        }else {
+            labelC0R3.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(4,0).equals(labelC0R4.getText())){
+            labelC0R4.setTextFill(Color.BLACK);
+        }else {
+            labelC0R4.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(5,0).equals(labelC0R5.getText())){
+            labelC0R5.setTextFill(Color.BLACK);
+        }else {
+            labelC0R5.setTextFill(Color.RED);
+        }
+
+        //validate colunms
+        if (boardModel.getBoardModelGrid(0,1).equals(labelC1R0.getText())){
+            labelC1R0.setTextFill(Color.BLACK);
+        }else {
+            labelC1R0.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(0,2).equals(labelC2R0.getText())){
+            labelC2R0.setTextFill(Color.BLACK);
+        }else {
+            labelC2R0.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(0,3).equals(labelC3R0.getText())){
+            labelC3R0.setTextFill(Color.BLACK);
+        }else {
+            labelC3R0.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(0,4).equals(labelC4R0.getText())){
+            labelC4R0.setTextFill(Color.BLACK);
+        }else {
+            labelC4R0.setTextFill(Color.RED);
+        }
+
+        if (boardModel.getBoardModelGrid(0,5).equals(labelC5R0.getText())){
+            labelC5R0.setTextFill(Color.BLACK);
+        }else {
+            labelC5R0.setTextFill(Color.RED);
+        }
+    }
+
+
 
     /**
      * States:
@@ -86,23 +171,33 @@ public class BoardController implements Initializable {
      */
     public void buttonClicked(ActionEvent actionEvent) {
         Button btnClicked = (Button) actionEvent.getSource();
+        int row = gridPane.getRowIndex(btnClicked);
+        int colunm = gridPane.getColumnIndex(btnClicked);
 
         if(!btnClicked.getText().equals("1")){
             switch (btnClicked.getText()){
                 case "0":
-                    btnClicked.setText("2");
+                    boardModel.setBoardModelGrid(row,colunm,"2");
+                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
+
                     break;
                 case "2":
-                    btnClicked.setText("3");
+                    boardModel.setBoardModelGrid(row,colunm,"3");
+                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
                     break;
                 case "3":
-                    btnClicked.setText("0");
+                    boardModel.setBoardModelGrid(row,colunm,"0");
+                   // boardModelGrid[row][colunm]="0";
+                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
                     break;
                 default:
-                    btnClicked.setText("-1");
+                    boardModel.setBoardModelGrid(row,colunm,"-1");
+                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
                     break;
             }
         }
+        validateNumberOfDogs();
+
     }
 
 

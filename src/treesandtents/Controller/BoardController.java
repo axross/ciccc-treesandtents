@@ -11,6 +11,7 @@ import javafx.scene.text.FontWeight;
 import treesandtents.Model.BoardModel;
 import treesandtents.View.VictoryWindow;
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -94,9 +95,11 @@ public class BoardController implements Initializable {
 
     }
 
+
     public boolean validateNumberOfDogs(){
         boardModel.countNumberOfDogs();
         boolean validate = true;
+
 
         //validate rows
         if (boardModel.getBoardModelGrid(1,0).equals(labelC0R1.getText())){
@@ -171,6 +174,7 @@ public class BoardController implements Initializable {
         }
 
         return validate;
+
     }
 
 
@@ -210,9 +214,11 @@ public class BoardController implements Initializable {
                     break;
             }
         }
+
         if (validateNumberOfDogs() && !boardModel.thereIsEmptyCells()){
             VictoryWindow.display("Dogs and Bones", "You win!!");
         }
+
 
     }
 

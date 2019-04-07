@@ -78,12 +78,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/TicTacToe/src/sample/Model/Judge.java">
+        <entry file="file://$PROJECT_DIR$/src/treesandtents/View/main.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -179,10 +180,12 @@
         <option value="$PROJECT_DIR$/src/treesandtents/View/Cell.fxml" />
         <option value="$PROJECT_DIR$/src/treesandtents/View/buttonCell.fxml" />
         <option value="$PROJECT_DIR$/src/treesandtents/Controller/ButtonCell.java" />
-        <option value="$USER_HOME$/Downloads/TicTacToe/src/sample/Controller/Controller.java" />
-        <option value="$USER_HOME$/Downloads/TicTacToe/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/../Downloads/TicTacToe/src/sample/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/../Downloads/TicTacToe/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/treesandtents/View/main.fxml" />
         <option value="$PROJECT_DIR$/src/treesandtents/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/treesandtents/Model/BoardModel.java" />
+        <option value="$PROJECT_DIR$/src/treesandtents/View/board.fxml" />
         <option value="$PROJECT_DIR$/src/treesandtents/Main.java" />
         <option value="$PROJECT_DIR$/src/treesandtents/Controller/Board.java" />
         <option value="$PROJECT_DIR$/src/treesandtents/View/board.fxml" />
@@ -193,10 +196,11 @@
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="47" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="808" />
+    <option name="width" value="1346" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -207,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,10 +250,19 @@
               <item name="treesandtents" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ciccc-treesandtents" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ciccc-treesandtents" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="treesandtents" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -476,8 +488,9 @@
           <caret line="122" column="56" lean-forward="true" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/treesandtents/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/treesandtents/Controller/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
@@ -487,18 +500,17 @@
         </state>
       </provider>
     </entry>
-
     <entry file="file://$PROJECT_DIR$/src/treesandtents/View/main.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="8">
+          <caret line="118" column="45" lean-forward="true" selection-start-line="118" selection-start-column="45" selection-end-line="118" selection-end-column="45" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/treesandtents/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="38">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
@@ -532,14 +544,14 @@
           <caret line="14" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$USER_HOME$/untitled folder/ciccc-treesandtents/src/treesandtents/Controller/BoardController.java">
+    <entry file="file://$PROJECT_DIR$/../Desktop/ciccc-treesandtents/src/treesandtents/View/main.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="142" column="22" lean-forward="true" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$USER_HOME$/Downloads/TicTacToe/src/sample/View/css/popup.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -568,6 +580,7 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$USER_HOME$/Downloads/TicTacToe/src/sample/Model/Judge.java">
       <provider selected="true" editor-type-id="text-editor">

@@ -9,6 +9,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.FontWeight;
 import treesandtents.Model.BoardModel;
+import treesandtents.View.VictoryWindow;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -93,37 +95,45 @@ public class BoardController implements Initializable {
 
     }
 
-    public void validateNumberOfDogs(){
+
+    public boolean validateNumberOfDogs(){
         boardModel.countNumberOfDogs();
+        boolean validate = true;
+
 
         //validate rows
         if (boardModel.getBoardModelGrid(1,0).equals(labelC0R1.getText())){
             labelC0R1.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC0R1.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(2,0).equals(labelC0R2.getText())){
             labelC0R2.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC0R2.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(3,0).equals(labelC0R3.getText())){
             labelC0R3.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC0R3.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(4,0).equals(labelC0R4.getText())){
             labelC0R4.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC0R4.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(5,0).equals(labelC0R5.getText())){
             labelC0R5.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC0R5.setTextFill(Color.RED);
         }
 
@@ -131,32 +141,40 @@ public class BoardController implements Initializable {
         if (boardModel.getBoardModelGrid(0,1).equals(labelC1R0.getText())){
             labelC1R0.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC1R0.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(0,2).equals(labelC2R0.getText())){
             labelC2R0.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC2R0.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(0,3).equals(labelC3R0.getText())){
             labelC3R0.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC3R0.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(0,4).equals(labelC4R0.getText())){
             labelC4R0.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC4R0.setTextFill(Color.RED);
         }
 
         if (boardModel.getBoardModelGrid(0,5).equals(labelC5R0.getText())){
             labelC5R0.setTextFill(Color.BLACK);
         }else {
+            validate = false;
             labelC5R0.setTextFill(Color.RED);
         }
+
+        return validate;
+
     }
 
 
@@ -196,7 +214,11 @@ public class BoardController implements Initializable {
                     break;
             }
         }
-        validateNumberOfDogs();
+
+        if (validateNumberOfDogs() && !boardModel.thereIsEmptyCells()){
+            VictoryWindow.display("Dogs and Bones", "You win!!");
+        }
+
 
     }
 

@@ -44,4 +44,16 @@ public class BoardModel {
             countDogColunm = 0;
         }
     }
+
+    public boolean thereIsEmptyCells(){
+        for (int i = 1; i < boardModelGrid.length; i++) {
+            for (int j = 1; j < boardModelGrid.length; j++) {
+                if (boardModelGrid[i][j].equals("0")){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }

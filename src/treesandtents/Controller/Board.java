@@ -4,7 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -58,7 +61,13 @@ public class Board implements Initializable {
 
     //Grid of the board
     @FXML
+    public VBox vBox;
+
+    @FXML
     private GridPane gridPane;
+
+    @FXML
+    public FlowPane flowPane;
 
     private Button[][] boardGrid;
 

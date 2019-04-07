@@ -5,7 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.FontWeight;
 import treesandtents.Model.BoardModel;
@@ -61,7 +63,16 @@ public class BoardController implements Initializable {
     @FXML
     private Button btnC1R5, btnC2R5, btnC3R5, btnC4R5, btnC5R5;
 
+    @FXML
+    public Button btnReset;
+    @FXML
+    public Button btnTips;
+
     //Grid of the board
+    @FXML
+    public VBox vBox;
+    @FXML
+    public FlowPane flowPane;
     @FXML
     private GridPane gridPane;
 

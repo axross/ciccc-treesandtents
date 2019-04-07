@@ -1,61 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
 
-<GridPane fx:id="gridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treesandtents.Controller.BoardController">
-  <columnConstraints>
-    <ColumnConstraints fx:id="c0" />
-    <ColumnConstraints fx:id="c1" />
-      <ColumnConstraints fx:id="c2" />
-      <ColumnConstraints fx:id="c3" />
-      <ColumnConstraints fx:id="c4" />
-      <ColumnConstraints fx:id="c5" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints fx:id="r0" />
-    <RowConstraints fx:id="r1" />
-    <RowConstraints fx:id="r2" />
-      <RowConstraints fx:id="r3" />
-      <RowConstraints fx:id="r4" />
-      <RowConstraints fx:id="r5" />
-  </rowConstraints>
+<?import javafx.geometry.Insets?>
+<VBox fx:id="vBox" alignment="CENTER" styleClass="VBox" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treesandtents.Controller.BoardController">
    <children>
-       <Label fx:id="labelC0R1" text="1" GridPane.rowIndex="1" />
-       <Label fx:id="labelC0R2" text="1" GridPane.rowIndex="2" />
-       <Label fx:id="labelC0R3" text="0" GridPane.rowIndex="3" />
-       <Label fx:id="labelC0R4" text="2" GridPane.rowIndex="4" />
-       <Label fx:id="labelC0R5" text="1" GridPane.rowIndex="5" />
-       <Label fx:id="labelC1R0" text="2" GridPane.columnIndex="1" />
-       <Label fx:id="labelC2R0" text="0" GridPane.columnIndex="2" />
-       <Label fx:id="labelC3R0" text="1" GridPane.columnIndex="3" />
-       <Label fx:id="labelC4R0" text="1" GridPane.columnIndex="4" />
-       <Label fx:id="labelC5R0" text="1" GridPane.columnIndex="5" />
-       <Button fx:id="btnC1R1" text="0" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#buttonClicked"/>
-       <Button fx:id="btnC1R2" text="0" GridPane.rowIndex="2" GridPane.columnIndex="1" onAction="#buttonClicked"/>
-       <Button fx:id="btnC1R3" text="0" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#buttonClicked"/>
-       <Button fx:id="btnC1R4" text="1" GridPane.rowIndex="4" GridPane.columnIndex="1" onAction="#buttonClicked"/>
-       <Button fx:id="btnC1R5" text="0" GridPane.rowIndex="5" GridPane.columnIndex="1" onAction="#buttonClicked"/>
-       <Button fx:id="btnC2R1" text="0" GridPane.rowIndex="1" GridPane.columnIndex="2" onAction="#buttonClicked"/>
-       <Button fx:id="btnC2R2" text="1" GridPane.rowIndex="2" GridPane.columnIndex="2" onAction="#buttonClicked"/>
-       <Button fx:id="btnC2R3" text="0" GridPane.rowIndex="3" GridPane.columnIndex="2" onAction="#buttonClicked"/>
-       <Button fx:id="btnC2R4" text="1" GridPane.rowIndex="4" GridPane.columnIndex="2" onAction="#buttonClicked"/>
-       <Button fx:id="btnC2R5" text="0" GridPane.rowIndex="5" GridPane.columnIndex="2" onAction="#buttonClicked"/>
-       <Button fx:id="btnC3R1" text="0" GridPane.rowIndex="1" GridPane.columnIndex="3" onAction="#buttonClicked"/>
-       <Button fx:id="btnC3R2" text="0" GridPane.rowIndex="2" GridPane.columnIndex="3" onAction="#buttonClicked"/>
-       <Button fx:id="btnC3R3" text="0" GridPane.rowIndex="3" GridPane.columnIndex="3" onAction="#buttonClicked"/>
-       <Button fx:id="btnC3R4" text="0" GridPane.rowIndex="4" GridPane.columnIndex="3" onAction="#buttonClicked"/>
-       <Button fx:id="btnC3R5" text="0" GridPane.rowIndex="5" GridPane.columnIndex="3" onAction="#buttonClicked"/>
-       <Button fx:id="btnC4R1" text="0" GridPane.rowIndex="1" GridPane.columnIndex="4" onAction="#buttonClicked"/>
-       <Button fx:id="btnC4R2" text="1" GridPane.rowIndex="2" GridPane.columnIndex="4" onAction="#buttonClicked"/>
-       <Button fx:id="btnC4R3" text="0" GridPane.rowIndex="3" GridPane.columnIndex="4" onAction="#buttonClicked"/>
-       <Button fx:id="btnC4R4" text="0" GridPane.rowIndex="4" GridPane.columnIndex="4" onAction="#buttonClicked"/>
-       <Button fx:id="btnC4R5" text="0" GridPane.rowIndex="5" GridPane.columnIndex="4" onAction="#buttonClicked"/>
-       <Button fx:id="btnC5R1" text="0" GridPane.rowIndex="1" GridPane.columnIndex="5" onAction="#buttonClicked"/>
-       <Button fx:id="btnC5R2" text="0" GridPane.rowIndex="2" GridPane.columnIndex="5" onAction="#buttonClicked"/>
-       <Button fx:id="btnC5R3" text="0" GridPane.rowIndex="3" GridPane.columnIndex="5" onAction="#buttonClicked"/>
-       <Button fx:id="btnC5R4" text="0" GridPane.rowIndex="4" GridPane.columnIndex="5" onAction="#buttonClicked"/>
-       <Button fx:id="btnC5R5" text="1" GridPane.rowIndex="5" GridPane.columnIndex="5" onAction="#buttonClicked"/>
+      <GridPane fx:id="gridPane" alignment="center" hgap="6" styleClass="Grid-pane" vgap="6">
+        <columnConstraints>
+          <ColumnConstraints fx:id="c0" halignment="CENTER" />
+          <ColumnConstraints fx:id="c1" halignment="CENTER" />
+            <ColumnConstraints fx:id="c2" halignment="CENTER" />
+            <ColumnConstraints fx:id="c3" halignment="CENTER" />
+            <ColumnConstraints fx:id="c4" halignment="CENTER" />
+            <ColumnConstraints fx:id="c5" halignment="CENTER" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fx:id="r0" valignment="CENTER" />
+          <RowConstraints fx:id="r1" valignment="CENTER" />
+          <RowConstraints fx:id="r2" valignment="CENTER" />
+            <RowConstraints fx:id="r3" valignment="CENTER" />
+            <RowConstraints fx:id="r4" valignment="CENTER" />
+            <RowConstraints fx:id="r5" valignment="CENTER" />
+        </rowConstraints>
+         <children>
+             <Label fx:id="labelC0R1" styleClass="number-row" text="1" GridPane.rowIndex="1">
+                 <GridPane.margin>
+                     <Insets right="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC0R2" styleClass="number-row" text="1" GridPane.rowIndex="2">
+                 <GridPane.margin>
+                     <Insets right="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC0R3" styleClass="number-row" text="0" GridPane.rowIndex="3">
+                 <GridPane.margin>
+                     <Insets right="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC0R4" styleClass="number-row" text="2" GridPane.rowIndex="4">
+                 <GridPane.margin>
+                     <Insets right="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC0R5" styleClass="number-row" text="1" GridPane.rowIndex="5">
+                 <GridPane.margin>
+                     <Insets right="16.0" />
+                 </GridPane.margin>
+             </Label>
+
+             <Label fx:id="labelC1R0" styleClass="number-col" text="2" GridPane.columnIndex="1">
+                 <GridPane.margin>
+                     <Insets bottom="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC2R0" styleClass="number-col" text="0" GridPane.columnIndex="2">
+                 <GridPane.margin>
+                     <Insets bottom="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC3R0" styleClass="number-col" text="1" GridPane.columnIndex="3">
+                 <GridPane.margin>
+                     <Insets bottom="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC4R0" styleClass="number-col" text="1" GridPane.columnIndex="4">
+                 <GridPane.margin>
+                     <Insets bottom="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Label fx:id="labelC5R0" styleClass="number-col" text="1" GridPane.columnIndex="5">
+                 <GridPane.margin>
+                     <Insets bottom="16.0" />
+                 </GridPane.margin>
+             </Label>
+             <Button fx:id="btnC1R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+             <Button fx:id="btnC1R2" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+             <Button fx:id="btnC1R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+             <Button fx:id="btnC1R4" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+             <Button fx:id="btnC1R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+             <Button fx:id="btnC2R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+             <Button fx:id="btnC2R2" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+             <Button fx:id="btnC2R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+             <Button fx:id="btnC2R4" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+             <Button fx:id="btnC2R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+             <Button fx:id="btnC3R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+             <Button fx:id="btnC3R2" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+             <Button fx:id="btnC3R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+             <Button fx:id="btnC3R4" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+             <Button fx:id="btnC3R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+             <Button fx:id="btnC4R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+             <Button fx:id="btnC4R2" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+             <Button fx:id="btnC4R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+             <Button fx:id="btnC4R4" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+             <Button fx:id="btnC4R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+             <Button fx:id="btnC5R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+             <Button fx:id="btnC5R2" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+             <Button fx:id="btnC5R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+             <Button fx:id="btnC5R4" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+             <Button fx:id="btnC5R5" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+
+       <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="60" styleClass="flow-Pane">
+           <children>
+               <Button fx:id="btnReset" mnemonicParsing="false" styleClass="button-reset" text="Reset">
+                   <FlowPane.margin>
+                       <Insets top="50.0" />
+                   </FlowPane.margin>
+                   <padding>
+                       <Insets left="30.0" />
+                   </padding>
+               </Button>
+
+               <Button fx:id="btnTips" mnemonicParsing="false" styleClass="button-tips" text="Tips">
+                   <FlowPane.margin>
+                       <Insets top="50.0" />
+                   </FlowPane.margin>
+                   <padding>
+                       <Insets left="30.0" />
+                   </padding>
+               </Button>
+           </children>
+       </FlowPane>
    </children>
-</GridPane>
+</VBox>

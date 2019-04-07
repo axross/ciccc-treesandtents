@@ -14,7 +14,8 @@ public class Main extends Application {
         //The comment below is to test boardGame screen
         Parent root = FXMLLoader.load(getClass().getResource("View/board.fxml"));
         primaryStage.setTitle("Dogs and Bones");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 1000, 675));
+        root.getStylesheets().add("treesandtents/View/css/styles.css");
         primaryStage.show();
     }
 

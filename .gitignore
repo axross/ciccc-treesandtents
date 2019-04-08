@@ -24,6 +24,7 @@ out/*
 
 # Ignore IntelliJ IDEA's workspace setting
 .idea/**/*.xml
+.idea/workspace.xml
 !.idea/**/codeStyleSettings.xml
 !.idea/**/copyright/*.xml
 !.idea/**/fileColors.xml

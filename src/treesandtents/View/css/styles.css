@@ -33,15 +33,38 @@
 }
 
 .button-bone {
-    -fx-background-color: #BADC58;
+    -fx-background-color: #DFCB94;
     -fx-background-image: url('../../../../../../assets/images/bone.png');
     -fx-background-size: 64px 64px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
+}
+
+.button-dog {
+    -fx-background-color: #DFCB94;
+    -fx-background-image: url('../../../../../../assets/images/dog.png');
+    -fx-background-size: 64px 64px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
 }
 
 .button-empty {
     -fx-background-color: #212520;
+    -fx-background-size: 64px 64px;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
+
+}
+
+.button-grass {
+    -fx-background-color: #BADC58;
+    -fx-background-size: 64px 64px;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
 
 }
 

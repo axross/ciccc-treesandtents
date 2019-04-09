@@ -45,10 +45,27 @@
 
 }
 
-.number-row{
+.number-row {
     -fx-font-size: 32px;
 }
 
-.number-col{
+.number-col {
     -fx-font-size: 32px;
+}
+
+/* opening scene*/
+.button-rules {
+    -fx-text-fill: #FCF8ED;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 126px;
+    -fx-background-color: #d9522b;
+    -fx-font-size: 24px;
+}
+
+.button-start {
+    -fx-text-fill: #FCF8ED;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 126px;
+    -fx-background-color: #d9522b;
+    -fx-font-size: 24px;
 }

@@ -57,7 +57,7 @@ public class VictoryWindow {
 
 
         Scene scene = new Scene(layout, 200, 80);
-        //scene.getStylesheets().add("sample/View/css/popup.css");
+        scene.getStylesheets().add("sample/View/css/popup.css");
         window.setScene(scene);
         window.showAndWait();
 

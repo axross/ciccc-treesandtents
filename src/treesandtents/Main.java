@@ -17,6 +17,16 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+//    @Override
+//    public void start(Stage primaryStage) throws Exception{
+//        //The comment below is to test boardGame screen
+//        Parent root = FXMLLoader.load(getClass().getResource("View/main.fxml"));
+//        primaryStage.setTitle("Dogs and Bones");
+//        primaryStage.setScene(new Scene(root, 1000, 675));
+//        root.getStylesheets().add("treesandtents/View/css/styles.css");
+//        primaryStage.show();
+//    }
+
     public static void main(String[] args) {
         launch(args);
     }

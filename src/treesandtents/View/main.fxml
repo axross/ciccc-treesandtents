@@ -1,5 +1,17 @@
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<GridPane fx:controller="treesandtents.Controller.MainController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox fx:id="vBox" alignment="CENTER" styleClass="VBox" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml" fx:controller="treesandtents.Controller.MainController">
+    <children>
+        <GridPane fx:id="gridPane" alignment="center" styleClass="Grid-pane">
+            <ImageView fx:id="titleImage" styleClass="titleImage">
+            </ImageView>
+            <Button fx:id="btnStart" styleClass="button-start" text="Start" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+            <Button fx:id="btnRules" styleClass="button-rules" text="Rules" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+    </children>
+</VBox>

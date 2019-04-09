@@ -196,21 +196,23 @@ public class BoardController implements Initializable {
         int row = gridPane.getRowIndex(btnClicked);
         int colunm = gridPane.getColumnIndex(btnClicked);
 
-        if(!btnClicked.getText().equals("1")){
-            switch (btnClicked.getText()){
+        if(!boardModel.getBoardModelGrid(row,colunm).equals("1")){
+            switch (boardModel.getBoardModelGrid(row,colunm)){
                 case "0":
                     boardModel.setBoardModelGrid(row,colunm,"2");
-                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
+                    btnClicked.getStyleClass().clear();
+                    btnClicked.getStyleClass().add("button-grass");
 
                     break;
                 case "2":
                     boardModel.setBoardModelGrid(row,colunm,"3");
-                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
+                    btnClicked.getStyleClass().clear();
+                    btnClicked.getStyleClass().add("button-dog");
                     break;
                 case "3":
                     boardModel.setBoardModelGrid(row,colunm,"0");
-                   // boardModelGrid[row][colunm]="0";
-                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
+                    btnClicked.getStyleClass().clear();
+                    btnClicked.getStyleClass().add("button-empty");
                     break;
                 default:
                     boardModel.setBoardModelGrid(row,colunm,"-1");
@@ -219,8 +221,8 @@ public class BoardController implements Initializable {
             }
         }
 
-        if (validateNumberOfDogs() && !boardModel.thereIsEmptyCells()){
-            VictoryWindow.display("Dogs and Bones", "You win!!");
+        if (validateNumberOfDogs()){
+            VictoryWindow.display("Dogs and Bones", "You won!!");
         }
 
     }

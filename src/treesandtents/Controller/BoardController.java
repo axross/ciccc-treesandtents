@@ -88,12 +88,14 @@ public class BoardController implements Initializable {
 
     private String[][] boardModelGrid = new String[][] {
         {" ", "0", "0", "0", "0", "0"},
-        {"0", "0", "0", "0", "0", "0"},
-        {"0", "0", "1", "0", "1", "0"},
-        {"0", "0", "0", "0", "0", "0"},
-        {"0", "1", "1", "0", "0", "0"},
-        {"0", "0", "0", "0", "0", "1"}
+        {"0", "Empty", "Empty", "Empty", "Empty", "Empty"},
+        {"0", "Empty", "Bone", "Empty", "Bone", "Empty"},
+        {"0", "Empty", "Empty", "Empty", "Empty", "Empty"},
+        {"0", "Bone", "Bone", "Empty", "Empty", "Empty"},
+        {"0", "Empty", "Empty", "Empty", "Empty", "Bone"}
     };
+
+
 
     BoardModel boardModel = new BoardModel(boardModelGrid);
 
@@ -112,84 +114,112 @@ public class BoardController implements Initializable {
 
     }
 
+
     public boolean validateNumberOfDogs(){
         boardModel.countNumberOfDogs();
         boolean validate = true;
 
         //validate rows
         if (boardModel.getBoardModelGrid(1,0).equals(labelC0R1.getText())){
-            labelC0R1.setTextFill(Color.BLACK);
+            labelC0R1.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC0R1.setTextFill(Color.RED);
+            labelC0R1.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(2,0).equals(labelC0R2.getText())){
-            labelC0R2.setTextFill(Color.BLACK);
+            labelC0R2.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC0R2.setTextFill(Color.RED);
+            labelC0R2.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(3,0).equals(labelC0R3.getText())){
-            labelC0R3.setTextFill(Color.BLACK);
+            labelC0R3.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC0R3.setTextFill(Color.RED);
+            labelC0R3.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(4,0).equals(labelC0R4.getText())){
-            labelC0R4.setTextFill(Color.BLACK);
+            labelC0R4.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC0R4.setTextFill(Color.RED);
+            labelC0R4.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(5,0).equals(labelC0R5.getText())){
-            labelC0R5.setTextFill(Color.BLACK);
+            labelC0R5.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC0R5.setTextFill(Color.RED);
+            labelC0R5.setTextFill(Color.valueOf("#D9522B"));
         }
 
         //validate colunms
         if (boardModel.getBoardModelGrid(0,1).equals(labelC1R0.getText())){
-            labelC1R0.setTextFill(Color.BLACK);
+            labelC1R0.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC1R0.setTextFill(Color.RED);
+            labelC1R0.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(0,2).equals(labelC2R0.getText())){
-            labelC2R0.setTextFill(Color.BLACK);
+            labelC2R0.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC2R0.setTextFill(Color.RED);
+            labelC2R0.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(0,3).equals(labelC3R0.getText())){
-            labelC3R0.setTextFill(Color.BLACK);
+            labelC3R0.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC3R0.setTextFill(Color.RED);
+            labelC3R0.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(0,4).equals(labelC4R0.getText())){
-            labelC4R0.setTextFill(Color.BLACK);
+            labelC4R0.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC4R0.setTextFill(Color.RED);
+            labelC4R0.setTextFill(Color.valueOf("#D9522B"));
         }
 
         if (boardModel.getBoardModelGrid(0,5).equals(labelC5R0.getText())){
-            labelC5R0.setTextFill(Color.BLACK);
+            labelC5R0.setTextFill(Color.valueOf("#CCC2A8"));
         }else {
             validate = false;
-            labelC5R0.setTextFill(Color.RED);
+            labelC5R0.setTextFill(Color.valueOf("#D9522B"));
         }
 
         return validate;
     }
+
+public void tranformModelIntoView(){
+        Button[][] boardGrid2 = new Button[][]{
+            {btnC1R1, btnC2R1, btnC3R1, btnC4R1, btnC5R1},
+            {btnC1R2, btnC2R2, btnC3R2, btnC4R2, btnC5R2},
+            {btnC1R3, btnC2R3, btnC3R3, btnC4R3, btnC5R3},
+            {btnC1R4, btnC2R4, btnC3R4, btnC4R4, btnC5R4},
+            {btnC1R5, btnC2R5, btnC3R5, btnC4R5, btnC5R5}
+    };
+
+    for (int i = 1; i < boardModel.getBoardModelGrid().length; i++) {
+        for (int j = 1; j < boardModel.getBoardModelGrid().length; j++) {
+            if(boardModel.getBoardModelGrid(i,j).equals("Empty")){
+                boardGrid2[i-1][j-1].getStyleClass().clear();
+                boardGrid2[i-1][j-1].getStyleClass().add("button-empty");
+            }
+            if(boardModel.getBoardModelGrid(i,j).equals("Dog")){
+                boardGrid2[i-1][j-1].getStyleClass().clear();
+                boardGrid2[i-1][j-1].getStyleClass().add("button-dog");
+            }
+            if(boardModel.getBoardModelGrid(i,j).equals("Grass")){
+                boardGrid2[i-1][j-1].getStyleClass().clear();
+                boardGrid2[i-1][j-1].getStyleClass().add("button-grass");
+            }
+        }
+    }
+}
 
     /**
      * States:
@@ -201,35 +231,37 @@ public class BoardController implements Initializable {
      */
     public void buttonClicked(ActionEvent actionEvent) {
         Button btnClicked = (Button) actionEvent.getSource();
-        int row = gridPane.getRowIndex(btnClicked);
-        int colunm = gridPane.getColumnIndex(btnClicked);
+        if(btnClicked.getParent().equals(gridPane)){
+            int row = gridPane.getRowIndex(btnClicked);
+            int colunm = gridPane.getColumnIndex(btnClicked);
 
-        if(!boardModel.getBoardModelGrid(row,colunm).equals("1")){
-            switch (boardModel.getBoardModelGrid(row,colunm)){
-                case "0":
-                    boardModel.setBoardModelGrid(row,colunm,"2");
-                    btnClicked.getStyleClass().clear();
-                    btnClicked.getStyleClass().add("button-grass");
+            if(!boardModel.getBoardModelGrid(row,colunm).equals("Bone")){
+                switch (boardModel.getBoardModelGrid(row,colunm)){
+                    case "Empty":
+                        boardModel.setBoardModelGrid(row,colunm,"Grass");
+                        btnClicked.getStyleClass().clear();
+                        btnClicked.getStyleClass().add("button-grass");
 
-                    break;
-                case "2":
-                    boardModel.setBoardModelGrid(row,colunm,"3");
-                    btnClicked.getStyleClass().clear();
-                    btnClicked.getStyleClass().add("button-dog");
-                    break;
-                case "3":
-                    boardModel.setBoardModelGrid(row,colunm,"0");
-                    btnClicked.getStyleClass().clear();
-                    btnClicked.getStyleClass().add("button-empty");
-                    break;
-                default:
-                    boardModel.setBoardModelGrid(row,colunm,"-1");
-                    btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
-                    break;
+                        break;
+                    case "Grass":
+                        boardModel.setBoardModelGrid(row,colunm,"Dog");
+                        btnClicked.getStyleClass().clear();
+                        btnClicked.getStyleClass().add("button-dog");
+                        break;
+                    case "Dog":
+                        boardModel.setBoardModelGrid(row,colunm,"Empty");
+                        btnClicked.getStyleClass().clear();
+                        btnClicked.getStyleClass().add("button-empty");
+                        break;
+                    default:
+                        boardModel.setBoardModelGrid(row,colunm,"-1");
+                        btnClicked.setText(boardModel.getBoardModelGrid(row,colunm));
+                        break;
+                }
             }
         }
 
-        if (validateNumberOfDogs()){
+        if (validateNumberOfDogs() && !boardModel.thereIsEmptyCells()){
             VictoryWindow.display("Dogs and Bones", "You won!!");
         }
 
@@ -238,6 +270,12 @@ public class BoardController implements Initializable {
     public VBox getvBox() {
         return vBox;
     }
+
+    public void buttonResetClicked() {
+        boardModel.reset();
+        tranformModelIntoView();
+    }
+
 
     public static void display() throws IOException {
 //        Stage window = new Stage();
@@ -263,7 +301,7 @@ public class BoardController implements Initializable {
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Dogs and Bones");
 //        VBox layout = boardController.getvBox();
-        Scene scene = new Scene(root, 1000,675);
+        Scene scene = new Scene(root, 1000, 675);
         window.setScene(scene);
         scene.setRoot(root);
         scene.getStylesheets().add("treesandtents/View/css/styles.css");

@@ -30,53 +30,53 @@
             <RowConstraints fx:id="r5" valignment="CENTER" />
         </rowConstraints>
          <children>
-             <Label fx:id="labelC0R1" styleClass="number-row" text="1" GridPane.rowIndex="1">
+             <Label fx:id="labelC0R1" styleClass="label-numbers" text="1" GridPane.rowIndex="1">
                  <GridPane.margin>
                      <Insets right="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC0R2" styleClass="number-row" text="1" GridPane.rowIndex="2">
+             <Label fx:id="labelC0R2" styleClass="label-numbers" text="1" GridPane.rowIndex="2">
                  <GridPane.margin>
                      <Insets right="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC0R3" styleClass="number-row" text="0" GridPane.rowIndex="3">
+             <Label fx:id="labelC0R3" styleClass="label-numbers" text="0" GridPane.rowIndex="3">
                  <GridPane.margin>
                      <Insets right="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC0R4" styleClass="number-row" text="2" GridPane.rowIndex="4">
+             <Label fx:id="labelC0R4" styleClass="label-numbers" text="2" GridPane.rowIndex="4">
                  <GridPane.margin>
                      <Insets right="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC0R5" styleClass="number-row" text="1" GridPane.rowIndex="5">
+             <Label fx:id="labelC0R5" styleClass="label-numbers" text="1" GridPane.rowIndex="5">
                  <GridPane.margin>
                      <Insets right="16.0" />
                  </GridPane.margin>
              </Label>
 
-             <Label fx:id="labelC1R0" styleClass="number-col" text="2" GridPane.columnIndex="1">
+             <Label fx:id="labelC1R0" styleClass="label-numbers" text="2" GridPane.columnIndex="1">
                  <GridPane.margin>
                      <Insets bottom="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC2R0" styleClass="number-col" text="0" GridPane.columnIndex="2">
+             <Label fx:id="labelC2R0" styleClass="label-numbers" text="0" GridPane.columnIndex="2">
                  <GridPane.margin>
                      <Insets bottom="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC3R0" styleClass="number-col" text="1" GridPane.columnIndex="3">
+             <Label fx:id="labelC3R0" styleClass="label-numbers" text="1" GridPane.columnIndex="3">
                  <GridPane.margin>
                      <Insets bottom="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC4R0" styleClass="number-col" text="1" GridPane.columnIndex="4">
+             <Label fx:id="labelC4R0" styleClass="label-numbers" text="1" GridPane.columnIndex="4">
                  <GridPane.margin>
                      <Insets bottom="16.0" />
                  </GridPane.margin>
              </Label>
-             <Label fx:id="labelC5R0" styleClass="number-col" text="1" GridPane.columnIndex="5">
+             <Label fx:id="labelC5R0" styleClass="label-numbers" text="1" GridPane.columnIndex="5">
                  <GridPane.margin>
                      <Insets bottom="16.0" />
                  </GridPane.margin>
@@ -111,7 +111,7 @@
 
        <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="60" styleClass="flow-Pane">
            <children>
-               <Button fx:id="btnReset" mnemonicParsing="false" styleClass="button-reset" text="Reset">
+               <Button fx:id="btnReset" onAction="#buttonResetClicked" mnemonicParsing="false" styleClass="button-reset" text="Reset">
                    <FlowPane.margin>
                        <Insets top="50.0" />
                    </FlowPane.margin>

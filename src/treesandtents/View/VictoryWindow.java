@@ -19,6 +19,7 @@ import javafx.event.ActionEvent;
         import javafx.scene.layout.VBox;
         import javafx.stage.Modality;
         import javafx.stage.Stage;
+import treesandtents.Main;
 
 public class VictoryWindow {
 
@@ -42,7 +43,7 @@ public class VictoryWindow {
 
 
         Button okButton = new Button();
-        okButton.setText("OK");
+        okButton.setText("Quit");
         okButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

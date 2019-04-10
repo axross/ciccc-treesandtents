@@ -68,10 +68,6 @@
 
 }
 
-.number-row{
-    -fx-font-size: 32px;
-}
-
-.number-col{
+.label-numbers{
     -fx-font-size: 32px;
 }

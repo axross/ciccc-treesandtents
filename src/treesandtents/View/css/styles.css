@@ -33,15 +33,38 @@
 }
 
 .button-bone {
-    -fx-background-color: #BADC58;
+    -fx-background-color: #DFCB94;
     -fx-background-image: url('../../../../../../assets/images/bone.png');
     -fx-background-size: 64px 64px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
+}
+
+.button-dog {
+    -fx-background-color: #DFCB94;
+    -fx-background-image: url('../../../../../../assets/images/dog.png');
+    -fx-background-size: 64px 64px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
 }
 
 .button-empty {
     -fx-background-color: #212520;
+    -fx-background-size: 64px 64px;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
+
+}
+
+.button-grass {
+    -fx-background-color: #BADC58;
+    -fx-background-size: 64px 64px;
+    -fx-pref-height: 64px;
+    -fx-pref-width: 64px;
 
 }
 
@@ -53,19 +76,3 @@
     -fx-font-size: 32px;
 }
 
-/* opening scene*/
-.button-rules {
-    -fx-text-fill: #FCF8ED;
-    -fx-pref-height: 50px;
-    -fx-pref-width: 126px;
-    -fx-background-color: #d9522b;
-    -fx-font-size: 24px;
-}
-
-.button-start {
-    -fx-text-fill: #FCF8ED;
-    -fx-pref-height: 50px;
-    -fx-pref-width: 126px;
-    -fx-background-color: #d9522b;
-    -fx-font-size: 24px;
-}

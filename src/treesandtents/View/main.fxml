@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<VBox fx:id="vBox" alignment="CENTER" styleClass="VBox" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml" fx:controller="treesandtents.Controller.MainController">
+<AnchorPane fx:id="anchorPane" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treesandtents.Controller.MainController">
     <children>
-        <GridPane fx:id="gridPane" alignment="center" styleClass="Grid-pane">
-            <ImageView fx:id="titleImage" styleClass="titleImage">
-            </ImageView>
-            <Button fx:id="btnStart" styleClass="button-start" text="Start" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
-            <Button fx:id="btnRules" styleClass="button-rules" text="Rules" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <GridPane fx:id="gridPane" alignment="center" hgap="20" prefHeight="527.0" prefWidth="140.0" styleClass="Grid-pane" vgap="500" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button fx:id="btnStart" onAction="#buttonStarClicked" styleClass="button-start" text="Start" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btnRules" styleClass="button-rules" text="Rules" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
         </GridPane>
     </children>
-</VBox>
+</AnchorPane>

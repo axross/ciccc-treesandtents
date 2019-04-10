@@ -1,21 +1,25 @@
 package treesandtents.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+
+import java.io.IOException;
 
 public class MainController{
 
     @FXML
-    public VBox vBox;
-    @FXML
     public GridPane gridPane;
-    @FXML
-    public ImageView titleImage;
     @FXML
     public Button btnRules;
     @FXML
     public Button btnStart;
+    @FXML
+    public AnchorPane anchorPane;
+
+    public void buttonStarClicked(ActionEvent actionEvent) throws IOException {
+        BoardController.display();
+    }
 }

@@ -80,31 +80,31 @@
                      <Insets bottom="16.0" />
                  </GridPane.margin>
              </Label>
-             <Button fx:id="btnC1R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-             <Button fx:id="btnC1R2" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-             <Button fx:id="btnC1R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-             <Button fx:id="btnC1R4" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-             <Button fx:id="btnC1R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-             <Button fx:id="btnC2R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-             <Button fx:id="btnC2R2" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-             <Button fx:id="btnC2R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-             <Button fx:id="btnC2R4" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-             <Button fx:id="btnC2R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-             <Button fx:id="btnC3R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-             <Button fx:id="btnC3R2" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-             <Button fx:id="btnC3R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-             <Button fx:id="btnC3R4" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-             <Button fx:id="btnC3R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-             <Button fx:id="btnC4R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-             <Button fx:id="btnC4R2" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-             <Button fx:id="btnC4R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-             <Button fx:id="btnC4R4" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-             <Button fx:id="btnC4R5" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-             <Button fx:id="btnC5R1" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-             <Button fx:id="btnC5R2" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-             <Button fx:id="btnC5R3" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-             <Button fx:id="btnC5R4" onAction="#buttonClicked" styleClass="button-empty" text="0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-             <Button fx:id="btnC5R5" onAction="#buttonClicked" styleClass="button-bone" text="1" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+             <Button fx:id="btnC1R1" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+             <Button fx:id="btnC1R2" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+             <Button fx:id="btnC1R3" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+             <Button fx:id="btnC1R4" onAction="#buttonClicked" styleClass="button-bone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+             <Button fx:id="btnC1R5" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+             <Button fx:id="btnC2R1" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+             <Button fx:id="btnC2R2" onAction="#buttonClicked" styleClass="button-bone" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+             <Button fx:id="btnC2R3" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+             <Button fx:id="btnC2R4" onAction="#buttonClicked" styleClass="button-bone" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+             <Button fx:id="btnC2R5" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+             <Button fx:id="btnC3R1" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+             <Button fx:id="btnC3R2" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+             <Button fx:id="btnC3R3" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+             <Button fx:id="btnC3R4" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+             <Button fx:id="btnC3R5" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+             <Button fx:id="btnC4R1" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+             <Button fx:id="btnC4R2" onAction="#buttonClicked" styleClass="button-bone" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+             <Button fx:id="btnC4R3" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+             <Button fx:id="btnC4R4" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+             <Button fx:id="btnC4R5" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+             <Button fx:id="btnC5R1" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+             <Button fx:id="btnC5R2" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+             <Button fx:id="btnC5R3" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+             <Button fx:id="btnC5R4" onAction="#buttonClicked" styleClass="button-empty" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+             <Button fx:id="btnC5R5" onAction="#buttonClicked" styleClass="button-bone" GridPane.columnIndex="5" GridPane.rowIndex="5" />
          </children>
       </GridPane>
 

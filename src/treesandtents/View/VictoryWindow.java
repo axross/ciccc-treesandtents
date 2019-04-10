@@ -57,8 +57,8 @@ public class VictoryWindow {
         layout.setAlignment(Pos.CENTER);
 
 
-        Scene scene = new Scene(layout, 200, 80);
-        //scene.getStylesheets().add("sample/View/css/popup.css");
+        Scene scene = new Scene(layout, 500, 200);
+        scene.getStylesheets().add("sample/View/css/popup.css");
         window.setScene(scene);
         window.showAndWait();
 

@@ -1,16 +1,25 @@
 package treesandtents.Controller;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import treesandtents.Model.BoardModel;
 import treesandtents.View.VictoryWindow;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -258,9 +267,45 @@ public void tranformModelIntoView(){
 
     }
 
+    public VBox getvBox() {
+        return vBox;
+    }
+
     public void buttonResetClicked() {
         boardModel.reset();
         tranformModelIntoView();
+    }
+
+
+    public static void display() throws IOException {
+//        Stage window = new Stage();
+//
+//        window.initModality(Modality.APPLICATION_MODAL);
+//        window.setTitle("Dogs and Bones");
+//
+//        Parent root = FXMLLoader.getDefaultClassLoader().loadClass() .getResource("View/board.fxml");
+//        Scene scene = new Scene(root, 1000, 675);
+//
+//        window.setScene(scene);
+
+
+        BoardController boardController = new BoardController();
+
+//        Parent root = FXMLLoader.load(getClass().getResource("View/board.fxml"));
+////        primaryStage.setTitle("Dogs and Bones");
+////        primaryStage.setScene(new Scene(root, 1000, 675));
+////        root.getStylesheets().add("treesandtents/View/css/styles.css");
+////        primaryStage.show();
+        Parent root = FXMLLoader.load(boardController.getClass().getResource("../View/board.fxml"));
+        Stage window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
+        window.setTitle("Dogs and Bones");
+//        VBox layout = boardController.getvBox();
+        Scene scene = new Scene(root, 1000, 675);
+        window.setScene(scene);
+        scene.setRoot(root);
+        scene.getStylesheets().add("treesandtents/View/css/styles.css");
+        window.showAndWait();
     }
 
 

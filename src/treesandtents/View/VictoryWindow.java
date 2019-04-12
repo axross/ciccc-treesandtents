@@ -2,7 +2,10 @@ package treesandtents.View;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,35 +22,28 @@ import javafx.event.ActionEvent;
         import javafx.scene.layout.VBox;
         import javafx.stage.Modality;
         import javafx.stage.Stage;
+import treesandtents.Controller.BoardController;
 import treesandtents.Main;
 
 public class VictoryWindow {
 
     public static void display(String title, String message) {
-        // 1. Stage (window)
-        //    -> |Scene|
-        //        -> |Root| (Layout: GridPane, StackPane, HBox, VBox,...)
-        //            -> (Children) Nodes (Buttons, Labels, ...)
 
         Stage window = new Stage();
-        // while this window is on the screen, you cannot interact
-        // with other windows.
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(title);
-
+        BoardController boardController = new BoardController();
         VBox layout = new VBox(30);
         Label messageLabel = new Label();
         messageLabel.setText(message);
-        messageLabel.setStyle("-fx-text-fill: blue; -fx-font-size: 20;");
-//        messageLabel.setId("message");
+        messageLabel.setStyle("-fx-font-family: 'Rubik'; -fx-font-size: 20;");
 
 
         Button okButton = new Button();
-        okButton.setText("Quit");
+        okButton.setText("Ok");
         okButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                // close the window!
                 window.close();
             }
         });
@@ -58,7 +54,6 @@ public class VictoryWindow {
 
 
         Scene scene = new Scene(layout, 500, 200);
-        scene.getStylesheets().add("sample/View/css/popup.css");
         window.setScene(scene);
         window.showAndWait();
 

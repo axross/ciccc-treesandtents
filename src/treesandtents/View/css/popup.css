@@ -1,0 +1,11 @@
+.Button {
+    -fx-text-fill: #FCF8ED;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 126px;
+    -fx-background-color: #d9522b;
+    -fx-font-size: 24px;
+}
+
+.scene {
+    -fx-background-image: url('../../../../../../assets/images/goodjob.png');
+}

@@ -6,6 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -39,11 +40,12 @@ public class VictoryWindow {
         Label messageLabel = new Label();
         messageLabel.setText(message);
         messageLabel.setStyle("-fx-text-fill: blue; -fx-font-size: 20;");
-//        messageLabel.setId("message");
+////        messageLabel.setId("message");
 
 
         Button okButton = new Button();
         okButton.setText("Quit");
+        okButton.setStyle("-fx-text-fill: #FCF8ED; -fx-pref-height: 50px; -fx-pref-width: 126px; -fx-background-color: #d9522b; -fx-font-size: 24px; ");
         okButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -57,8 +59,8 @@ public class VictoryWindow {
         layout.setAlignment(Pos.CENTER);
 
 
-        Scene scene = new Scene(layout, 500, 200);
-        scene.getStylesheets().add("sample/View/css/popup.css");
+        Scene scene = new Scene(layout, 400, 400);
+        scene.getStylesheets().add("treesandtents/View/css/popup.css");
         window.setScene(scene);
         window.showAndWait();
 

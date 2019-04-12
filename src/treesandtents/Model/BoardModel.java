@@ -3,8 +3,8 @@ package treesandtents.Model;
 public class BoardModel {
     private String[][] boardModelGrid;
 
-    public BoardModel(String[][] boardModelGrid) {
-        this.boardModelGrid = boardModelGrid;
+    public BoardModel() {
+        reset();
     }
 
     public String[][] getBoardModelGrid() {

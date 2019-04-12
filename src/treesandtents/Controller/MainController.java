@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import treesandtents.View.Rules;
 
 import java.io.IOException;
 
@@ -13,7 +14,7 @@ public class MainController{
     @FXML
     public GridPane gridPane;
     @FXML
-    public Button btnRules;
+    public Button btnTips;
     @FXML
     public Button btnStart;
     @FXML
@@ -21,5 +22,9 @@ public class MainController{
 
     public void buttonStarClicked(ActionEvent actionEvent) throws IOException {
         BoardController.display();
+    }
+
+    public void buttonTipsClicked() {
+        Rules.display();
     }
 }

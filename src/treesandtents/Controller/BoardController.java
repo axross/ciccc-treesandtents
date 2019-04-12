@@ -1,11 +1,9 @@
 package treesandtents.Controller;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import treesandtents.Model.BoardModel;
+import treesandtents.View.Rules;
 import treesandtents.View.VictoryWindow;
 
 import java.io.IOException;
@@ -86,18 +85,9 @@ public class BoardController implements Initializable {
 
     private Button[][] boardGrid;
 
-    private String[][] boardModelGrid = new String[][] {
-        {" ", "0", "0", "0", "0", "0"},
-        {"0", "Empty", "Empty", "Empty", "Empty", "Empty"},
-        {"0", "Empty", "Bone", "Empty", "Bone", "Empty"},
-        {"0", "Empty", "Empty", "Empty", "Empty", "Empty"},
-        {"0", "Bone", "Bone", "Empty", "Empty", "Empty"},
-        {"0", "Empty", "Empty", "Empty", "Empty", "Bone"}
-    };
 
 
-
-    BoardModel boardModel = new BoardModel(boardModelGrid);
+    BoardModel boardModel = new BoardModel();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -276,31 +266,17 @@ public void tranformModelIntoView(){
         tranformModelIntoView();
     }
 
+    public void buttonTipsClicked() {
+        Rules.display();
+    }
 
     public static void display() throws IOException {
-//        Stage window = new Stage();
-//
-//        window.initModality(Modality.APPLICATION_MODAL);
-//        window.setTitle("Dogs and Bones");
-//
-//        Parent root = FXMLLoader.getDefaultClassLoader().loadClass() .getResource("View/board.fxml");
-//        Scene scene = new Scene(root, 1000, 675);
-//
-//        window.setScene(scene);
-
-
-        BoardController boardController = new BoardController();
-
-//        Parent root = FXMLLoader.load(getClass().getResource("View/board.fxml"));
-////        primaryStage.setTitle("Dogs and Bones");
-////        primaryStage.setScene(new Scene(root, 1000, 675));
-////        root.getStylesheets().add("treesandtents/View/css/styles.css");
-////        primaryStage.show();
-        Parent root = FXMLLoader.load(boardController.getClass().getResource("../View/board.fxml"));
         Stage window = new Stage();
+        BoardController boardController = new BoardController();
+        Parent root = FXMLLoader.load(boardController.getClass().getResource("../View/board.fxml"));
+
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("Dogs and Bones");
-//        VBox layout = boardController.getvBox();
         Scene scene = new Scene(root, 1000, 675);
         window.setScene(scene);
         scene.setRoot(root);
